@@ -1,0 +1,30 @@
+
+public class pascaltriangle {
+    public static void main(String[] args) {
+        int n=5;
+        int  [][]arr=new int[n][n];
+
+        //generate pascal triangle
+        for(int i=0; i<n; i++){
+            for(int j=0; j<=i; j++){
+                if(j==0 || j==i){
+                    arr[i][j]=1;
+                }else{
+                    arr[i][j]=arr[i-1][j-1]+arr[i-1][j];
+                }
+            }
+        }
+        // print pascal triangle
+        for(int i=0; i<n; i++){
+            //spaces for triangle shapes
+            for(int s=0; s<n-i; s++){
+                System.out.print(" ");
+            }
+            for(int j=0; j<=i; j++){
+                System.out.print(arr[i][j]+" ");
+            }
+            System.out.println();
+        }
+        
+    }
+}
