@@ -10,6 +10,7 @@
 //             }
 //         }
 //         return true;
+
 //     }
 //     public static ArrayList<Integer>findAngrams(String text,String Pattern){
 
@@ -25,3 +26,7 @@
 //         }
 //     }
 // }
+
+
+
+
