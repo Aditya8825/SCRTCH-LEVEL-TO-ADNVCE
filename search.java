@@ -1,27 +1,73 @@
-// public class search{
-//     static int search(int []arr,int target){
-//         int left=0;
-//         int right=arr.length-1;
+// class node{
+//     int val;
+//     node next;
 
-//         while(left<=right){
-//             int mid=(left+right)/2;
+//     node(int val){
+//         this.val=val;
+//         this.next=null;
 
-//             //element found
-//             if(arr[mid]==target){
-//                 return mid;
-//             }
-//             if(target<arr[mid]){
-//                 right=mid-1;
-//             }
-//             else{
-//                 left=mid+1;
-//             }
-//         }
-//         return -1;
-//     }
-//     public static void main(String[] args) {
-//         int []arr={1,2,3,4,5,6,7,7,8,9};
-//         int result = search(arr,7);
-//         System.out.println("index of "+7+" is = "+result);
 //     }
 // }
+// class linkedlist{
+//     node head;
+//     node tail;
+//     int size;
+
+//     //at head
+//     void Athead(int val){
+//         node temp = new node(val);
+//         if(head== null){
+//             head=tail=temp;
+//         }else{
+//             temp.next=head;
+//             head=temp;
+//         }
+//         size++;
+//     }
+//     void AddToTail(int val){
+//         node temp = new node(val);
+//         if (tail== null){
+//          head=tail=temp;
+//         }else{
+//             tail.next=temp;
+//             tail=temp;
+//         }
+//         size++;
+//     }
+//     boolean search(int key){
+//         node temp=head;
+//         while(temp!=null){
+//             if(temp.val==key){
+//                 return true;
+//             }
+//             temp=temp.next;
+//         }
+//         return false;
+//     }
+//     void display(){
+//         if(head==null){
+//             System.out.println("linkedlist is empty ! ");
+//             return;
+//         }
+//         node temp=head;
+//         while(temp!=null){
+
+//             System.out.print(temp.val+"->");
+//             temp=temp.next;
+//         }
+//         System.out.println("null");
+//     }
+// }
+
+// public class search {
+//   public static void main(String[] args) {
+//     linkedlist ll= new linkedlist();
+//    ll.Athead(10);
+//      ll.Athead(20);
+//        ll.Athead(30);
+//          ll.Athead(40);
+//          System.out.println(ll.search(40));
+//   ll.display();
+//   }
+
+//   }
