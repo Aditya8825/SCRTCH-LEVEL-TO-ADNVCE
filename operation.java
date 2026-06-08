@@ -1,99 +1,15 @@
+// import java.util.NoSuchElementException;
 
+// import org.w3c.dom.Node;
 
-
-
-//  class node {
-// int val;
-// node next;
-
-// node(int val){
-//    this.val=val;
-//     this.next=null;
-
-// }
-// }
-
-//  class linkedlist{
-//     node head;
-//     node tail;
-
-//     // add to head
-//     void AtHead(int val){
-//         node temp= new node(val);
-             
-//         if(head==null){
-//             head=tail=temp;
-
-//         }else{
-//             temp.next=head;
-//             head=temp;
-
-//         }
-//     }
-//      void AddToTail(int val){
-//         node temp= new node(val);
-
-//         if(tail == null){
-//             head=tail=temp;
-
-//         }else{
-//             tail.next=temp;
-//             tail=temp;
-//         }
-//      }
-//       void printll(){
-//         if(head==null){
-//             System.out.println("linkedlist is empty");
-//             return;
-//         }
-//         node temp=head;
-//         while(temp!=null){
-//             System.out.println(temp.val+" -> ");
-//             temp=temp.next;
-//         }
-//         System.out.println("null");
-//       }
-//  }
 // public class operation {
-//    public static void main(String[] args) {
-//       linkedlist ll= new linkedlist();
-//       ll.AddToTail(50);
-//       ll.AtHead(10);
+//     static class MyQueue {
+//     Node head;
+//     Node tail;
+//     int size;
 
-//       ll.printll();
-//    }   
-// }
-
-
-// class node {
-//     int val;
-//     node next;
-
-//     node(int val) {
-//         this.val = val;
-//         this.next = null;
-//     }
-// }
-
-// class linkedlist {
-//     node head;
-//     node tail;
-
-//     // add at head
-//     void AtHead(int val) {
-//         node temp = new node(val);
-
-//         if (head == null) {
-//             head = tail = temp;
-//         } else {
-//             temp.next = head;
-//             head = temp;
-//         }
-//     }
-
-//     // add at tail
-//     void AddToTail(int val) {
-//         node temp = new node(val);
+//     void add(int val) { // enqueue
+//         Node temp = new Node(val);
 
 //         if (tail == null) {
 //             head = tail = temp;
@@ -101,54 +17,56 @@
 //             tail.next = temp;
 //             tail = temp;
 //         }
+
+//         size++;
 //     }
 
-//     // delete at head
-//     void deleteAtHead() {
-//         if (head == null) {
-//             System.out.println("linked list is empty");
-//             return;
+//     int remove() { // dequeue
+//         if (isEmpty()) {
+//             throw new NoSuchElementException("Queue is empty");
 //         }
 
+//         int front = head.val;
 //         head = head.next;
 
-//         // if list becomes empty
 //         if (head == null) {
 //             tail = null;
 //         }
+
+//         size--;
+//         return front;
 //     }
 
-//     // print linked list
-//     void printll() {
-//         if (head == null) {
-//             System.out.println("linkedlist is empty");
-//             return;
+//     int peek() { // front element
+//         if (isEmpty()) {
+//             throw new NoSuchElementException("Queue is empty");
 //         }
+//         return head.val;
+//     }
 
-//         node temp = head;
+//     boolean isEmpty() {
+//         return size == 0;
+//     }
+
+//     int size() {
+//         return size;
+//     }
+
+//     void display() {
+//         Node temp = head;
 
 //         while (temp != null) {
-//             System.out.print(temp.val + " -> ");
+//             System.out.print(temp.val + " ");
 //             temp = temp.next;
 //         }
 
-//         System.out.println("null");
+//         System.out.println();
+//     }
+
+//     void clear() {
+//         head = null;
+//         tail = null;
+//         size = 0;
 //     }
 // }
-
-// public class operation {
-//     public static void main(String[] args) {
-
-//         linkedlist ll = new linkedlist();
-
-//         ll.AddToTail(50);
-//         ll.AtHead(10);
-//         ll.AddToTail(900);
-//         ll.AtHead(5090);
-
-//         ll.printll();
-
-//         ll.deleteAtHead();
-//         ll.printll();
-//     }
 // }
