@@ -1,14 +1,15 @@
-// import java.util.Scanner;
 
-// public class evenodd{
-//     static void checkeven(int n){
-//         if(n%2==0) {
-//             System.out.println("even");
-//         }else{
-//             System.out.println("odd");
-      
-//     }}
+// public class evenodd {
 //     public static void main(String[] args) {
-        
-//         checkeven(9);
-//     }}
+//         int n=7;
+
+//         //last bit 1 =>odd;
+//         //last bit 0=>even
+
+//         if((n&1)==1){
+//             System.out.println(" odd ");
+//         }else{
+//             System.out.println(" even ");
+//         }
+//     }
+// }
